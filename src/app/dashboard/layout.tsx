@@ -27,6 +27,15 @@ const navItems = [
     ),
   },
   {
+    label: "Preferred Rates",
+    href: "/dashboard/rates",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z" />
+      </svg>
+    ),
+  },
+  {
     label: "Pricing",
     href: "/dashboard/pricing",
     icon: (
