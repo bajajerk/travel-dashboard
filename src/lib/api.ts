@@ -252,3 +252,30 @@ export interface MarkupSetting {
   display_name: string | null;
   updated_at: string;
 }
+
+export interface Booking {
+  id: string;
+  guest_name: string;
+  guest_email: string;
+  hotel_name: string;
+  city: string;
+  country: string;
+  check_in: string;
+  check_out: string;
+  nights: number;
+  rooms: number;
+  guests: number;
+  status: "confirmed" | "completed" | "cancelled" | "pending" | "no-show";
+  total_amount: number;
+  currency: string;
+  category: "singles" | "couples" | "families";
+  created_at: string;
+}
+
+// Bookings
+// TODO: Backend endpoints need to be created:
+//   GET /api/admin/bookings — list bookings with optional filters
+//   GET /api/admin/bookings/:id — get single booking detail
+export async function getBookings() {
+  return request<{ bookings: Booking[] }>("/api/admin/bookings");
+}
